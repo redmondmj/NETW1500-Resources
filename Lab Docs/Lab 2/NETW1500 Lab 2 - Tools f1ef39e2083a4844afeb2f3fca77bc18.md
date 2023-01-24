@@ -1,10 +1,18 @@
 # NETW1500 Lab 2 - Tools
 
 Created: January 18, 2023 10:01 PM
-Last Updated: January 24, 2023 7:30 AM
+Last Updated: January 24, 2023 11:24 AM
 Status: Not started
+URL: https://redmondo.notion.site/NETW1500-Lab-2-Tools-f1ef39e2083a4844afeb2f3fca77bc18
 
 ## Hands-On Activity
+
+Complete these activities in your Name-DC01 server on our [ESXi Server](https://172.16.144.100/ui/#/login). There is no need to screenshot/document. Although, it is recommended that you keep your own notes for future reference.
+
+<aside>
+🚧 In some cases you may need to substitute your own IP address or Hostname. The lab doc may refer to the hostname as SERVERX, yours should be NAME-DC01
+
+</aside>
 
 ### 2-1 Server Manager
 
@@ -45,7 +53,7 @@ In this Hands-On activity, you explore the different configuration and managemen
 
 ### 2-2 Windows Admin Center
 
-In this Hands-On activity, you install and explore the different configuration and management features of the Windows Admin Center.
+In this Hands-On activity, you install and explore the different configuration and management features of the Windows Admin Center. As discussed in class, Windows Admin Center is updated regularly so if the instructions don’t match you may need to look for the equivalent.
 
 1. On your Windows Server 2019 host, open the Google Chrome Web browser and navigate to [https://aka.ms/WindowsAdminCenter](https://aka.ms/WindowsAdminCenter). Follow the prompts to download the latest non-preview version of the Windows Admin Center. When finished, the downloaded file will automatically be opened to start the installation.
     1. At the Use Microsoft Update page, click **Next**.
@@ -53,7 +61,7 @@ In this Hands-On activity, you install and explore the different configuration a
     3. At the Install Windows Admin Center on Windows Server page, click **Next**.
     4. At the Installing Windows Admin Center page, click **Next**. Note that the installation program will generate a self-signed encryption certificate for use on port 443 (HTTPS) and click **Install**.
     5. Click **Finish**.
-2. Navigate to https://SERVER*X*:443 within the Chrome Web browser and click **Skip tour** when prompted. Maximize your Chrome Web browser screen.
+2. Navigate to https://SERVER*X*:443 (remember SERVERX should be replaced with your hostname i.e. https://MATT-DC01:443 , you may also replace this with the generic localhost) within the Chrome Web browser and click **Skip tour** when prompted. Maximize your Chrome Web browser screen.
 3. At the All connections page, click **Add, Servers**. Note that you can add servers by server name or import a list of server names. Click **Cancel**.
 4. Highlight **server*x*** within the All connections page and click **Edit tags**. At the Edit connection tags window, type **2019HOST** and click **Save**.
 5. Highlight **server*x*** within the All Connections page and click **Connect**. Within the Overview tool, view the information shown and then click **Manage alerts**.
@@ -201,6 +209,9 @@ In this Hands-On activity, you query WMI using Windows PowerShell.
 ![12.png](NETW1500%20Lab%202%20-%20Tools%20f1ef39e2083a4844afeb2f3fca77bc18/12.png)
 
 - Details
+    
+    Watch for “wrapped lines” i.e. name=’c$’” should not really be on a line of it’s own… it it obviously meant to be the the “where” condition on line 4. It’s just wrapped to the next line for visibility.
+    
 1. Close Notepad and Windows PowerShell.
 
 ### 2-8 PowerShell Customization
@@ -232,6 +243,9 @@ In this Hands-On activity, you create and execute a basic PowerShell script usin
 ![14.png](NETW1500%20Lab%202%20-%20Tools%20f1ef39e2083a4844afeb2f3fca77bc18/14.png)
 
 - Details
+    
+    Watch for “wrapped lines” i.e.HandleCount,VirtualizeSize….. should not really be on a line of it’s own… it it obviously meant to be the the Format-Table cmdlet on line 7. It’s just wrapped to the next line for visibility.
+    
 1. Click the **Run Script** button (or press **F5**) to test your script in the Windows PowerShell console. Type the value `svchost.exe` and press **Enter** when prompted.
 
 <aside>
